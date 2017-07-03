@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnimalFarm
+{
+   public class Program
+    {
+       public static void Main()
+       {
+           var name = Console.ReadLine();
+           var age = int.Parse(Console.ReadLine());
+           try
+           {
+               var chicken = new Chicken(name,age);
+                Console.WriteLine($"Chicken {chicken.Name} (age {chicken.Age}) can produce {chicken.ProductPerDay} eggs per day.");
+            }
+           catch (ArgumentException exeption)
+           {
+               Console.WriteLine(exeption.Message);
+               
+           }
+            
+        }
+    }
+}
