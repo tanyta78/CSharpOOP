@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop", "BookShop\BookSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManKind", "ManKind\ManKind.csproj", "{102E70FB-B680-4EDF-BE32-3DAA25F3A8C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineRadioDatabase", "OnlineRadioDatabase\OnlineRadioDatabase.csproj", "{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{102E70FB-B680-4EDF-BE32-3DAA25F3A8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{102E70FB-B680-4EDF-BE32-3DAA25F3A8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{102E70FB-B680-4EDF-BE32-3DAA25F3A8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
