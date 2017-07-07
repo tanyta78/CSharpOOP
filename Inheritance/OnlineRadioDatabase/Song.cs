@@ -5,7 +5,7 @@
     private int seconds;
     private int minutes;
 
-    public Song(string songName, string artistName, int seconds, int minutes)
+    public Song(string artistName, string songName, int minutes, int seconds)
     {
         this.ArtistName = artistName;
         this.SongName = songName;

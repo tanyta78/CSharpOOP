@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManKind", "ManKind\ManKind.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineRadioDatabase", "OnlineRadioDatabase\OnlineRadioDatabase.csproj", "{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MordorPlan", "MordorPlan\MordorPlan.csproj", "{02EE5522-A33E-4E43-8C2E-98E4CF9DC900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{EC5599DB-4521-4B15-925A-CE4DE20B1CE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB6BE3F1-1F56-43EE-A0CD-3E57F48D30FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EE5522-A33E-4E43-8C2E-98E4CF9DC900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EE5522-A33E-4E43-8C2E-98E4CF9DC900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EE5522-A33E-4E43-8C2E-98E4CF9DC900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EE5522-A33E-4E43-8C2E-98E4CF9DC900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5599DB-4521-4B15-925A-CE4DE20B1CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5599DB-4521-4B15-925A-CE4DE20B1CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5599DB-4521-4B15-925A-CE4DE20B1CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5599DB-4521-4B15-925A-CE4DE20B1CE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
