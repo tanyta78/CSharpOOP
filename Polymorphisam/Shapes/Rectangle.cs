@@ -1,27 +1,38 @@
 ﻿public class Rectangle : Shape
 {
-    
     private double height;
     private double width;
 
-    public Rectangle( double height, double width)
+    public Rectangle(double height, double width)
     {
-        this.width = width;
-        this.height = height;
+        this.Width = width;
+        this.Height = height;
+    }
+
+    public double Height
+    {
+        get { return this.height; }
+        set { this.height = value; }
+    }
+
+    public double Width
+    {
+        get { return this.width; }
+        set { this.width = value; }
     }
 
     public override double CalculatePerimeter()
     {
-        return 2 * (this.height + this.width);
+        return 2 * (this.Height + this.Width);
     }
 
     public override double CalculateArea()
     {
-        return this.height * this.width;
+        return this.Height * this.Width;
     }
 
     public override string Draw()
     {
-        return "Rectangle";
+        return base.Draw()+"Rectangle";
     }
 }

@@ -6,6 +6,6 @@
 
     public virtual string Draw()
     {
-        return "Shape";
+        return "Drawing ";
     }
 }
