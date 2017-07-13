@@ -21,4 +21,5 @@
         set { power = value; }
     }
 
+    public abstract double GetBenderTotalPower();
 }

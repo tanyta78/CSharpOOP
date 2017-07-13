@@ -17,4 +17,9 @@
     {
         return $"Water Monument: {this.Name}, Water Affinity: {this.WaterAffinity}";
     }
+
+    public override int GetMonumentPoints()
+    {
+        return this.WaterAffinity;
+    }
 }

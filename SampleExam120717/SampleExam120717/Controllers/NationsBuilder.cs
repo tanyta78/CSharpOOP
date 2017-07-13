@@ -1,19 +1,35 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 public class NationsBuilder
 {
-    private AirNation airNation;
-    private WaterNation waterNation;
-    private FireNation fireNation;
-    private EarthNation earthNation;
+    private List<Nation> nations;
+
+    private Queue<string> warsIssued;
+
+    public NationsBuilder()
+    {
+        var airNation = new AirNation();
+        var waterNation = new WaterNation();
+        var fireNation = new FireNation();
+        var earthNation = new EarthNation();
+        this.nations = new List<Nation>();
+        nations.Add(airNation);
+        nations.Add(waterNation);
+        nations.Add(fireNation);
+        nations.Add(earthNation);
+        this.warsIssued = new Queue<string>();
+    }
 
     public void AssignBender(List<string> benderArgs)
     {
         //Parameters – type (string), name (string), power (int), secondaryParameter (floating-point number
-        var type = benderArgs[0];
-        var name = benderArgs[1];
-        var power = int.Parse(benderArgs[2]);
-        var secParam = double.Parse(benderArgs[3]);
+        var type = benderArgs[1];
+        var name = benderArgs[2];
+        var power = int.Parse(benderArgs[3]);
+        var secParam = double.Parse(benderArgs[4]);
 
         Bender bender = null;
 
@@ -21,22 +37,22 @@ public class NationsBuilder
         {
             case "Air":
                 bender = new AirBender(name, power, secParam);
-               this.airNation.Benders.Add(bender);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "AirNation").Benders.Add(bender);
                 break;
 
             case "Fire":
                 bender = new FireBender(name, power, secParam);
-                fireNation.Benders.Add(bender);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "FireNation").Benders.Add(bender);
                 break;
 
             case "Water":
                 bender = new WaterBender(name, power, secParam);
-                waterNation.Benders.Add(bender);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "WaterNation").Benders.Add(bender);
                 break;
 
             case "Earth":
                 bender = new EarthBender(name, power, secParam);
-                earthNation.Benders.Add(bender);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "EarthNation").Benders.Add(bender);
                 break;
         }
     }
@@ -44,9 +60,9 @@ public class NationsBuilder
     public void AssignMonument(List<string> monumentArgs)
     {
         //	Monument {type} {name} {affinity}
-        var type = monumentArgs[0];
-        var name = monumentArgs[1];
-        var affinity = int.Parse(monumentArgs[2]);
+        var type = monumentArgs[1];
+        var name = monumentArgs[2];
+        var affinity = int.Parse(monumentArgs[3]);
 
         Monument monument = null;
 
@@ -54,57 +70,61 @@ public class NationsBuilder
         {
             case "Air":
                 monument = new AirMonument(name, affinity);
-                airNation.Monuments.Add(monument);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "AirNation").Monuments.Add(monument);
                 break;
 
             case "Fire":
                 monument = new FireMonument(name, affinity);
-                fireNation.Monuments.Add(monument);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "FireNation").Monuments.Add(monument);
                 break;
 
             case "Water":
                 monument = new WaterMonument(name, affinity);
-                waterNation.Monuments.Add(monument);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "WaterNation").Monuments.Add(monument);
                 break;
 
             case "Earth":
                 monument = new EarthMonument(name, affinity);
-                earthNation.Monuments.Add(monument);
+                this.nations.FirstOrDefault(n => n.GetType().Name == "EarthNation").Monuments.Add(monument);
                 break;
         }
     }
 
     public string GetStatus(string nationsType)
     {
-        var result = "";
-        switch (nationsType)
-        {
-            case "Air":
-                result = airNation.ToString();
-                break;
+        var nameToCheck = nationsType + "Nation";
+        var result = this.nations.Where(n => n.GetType().Name == nameToCheck).FirstOrDefault();
 
-            case "Water":
-                result = waterNation.ToString();
-                break;
-
-            case "Fire":
-                result = fireNation.ToString();
-                break;
-
-            case "Earth":
-                result = earthNation.ToString();
-                break;
-        }
-        return result;
+        return result.ToString();
     }
 
     public void IssueWar(string nationsType)
     {
-        //TODO: Add some logic here …
+        warsIssued.Enqueue(nationsType);
+
+        foreach (var nation in nations)
+        {
+            nation.GetTotalPowerPoints();
+        }
+
+        var winner = nations.OrderByDescending(n => n.TotalPower).First();
+
+        foreach (var nation in nations.Where(n => n.GetType().Name != winner.GetType().Name))
+        {
+            nation.Benders.Clear();
+            nation.Monuments.Clear();
+        }
     }
 
     public string GetWarsRecord()
     {
-        return "";
+        var sb = new StringBuilder();
+        var count = 1;
+        while (warsIssued.Count != 0)
+        {
+            sb.AppendLine($"War {count} issued by {warsIssued.Dequeue()}");
+            count++;
+        }
+        return sb.ToString().Trim();
     }
 }

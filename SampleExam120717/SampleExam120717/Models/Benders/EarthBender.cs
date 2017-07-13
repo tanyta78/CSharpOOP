@@ -15,6 +15,11 @@
 
     public override string ToString()
     {
-        return $"Earth Bender: {this.Name}, Power: {this.Power}, Water Clarity: {this.GroundSaturation}";
+        return $"Earth Bender: {this.Name}, Power: {this.Power}, Ground Saturation:  {this.GroundSaturation:f2}";
+    }
+
+    public override double GetBenderTotalPower()
+    {
+        return this.Power * this.GroundSaturation;
     }
 }

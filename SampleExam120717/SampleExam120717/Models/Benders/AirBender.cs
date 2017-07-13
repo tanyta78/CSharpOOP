@@ -15,6 +15,11 @@
 
     public override string ToString()
     {
-        return $"Air Bender: {this.Name}, Power: {this.Power}, Aerial Integrity: {this.AerialIntegrity}";
+        return $"Air Bender: {this.Name}, Power: {this.Power}, Aerial Integrity: {this.AerialIntegrity:f2}";
+    }
+
+    public override double GetBenderTotalPower()
+    {
+        return this.Power * this.AerialIntegrity;
     }
 }

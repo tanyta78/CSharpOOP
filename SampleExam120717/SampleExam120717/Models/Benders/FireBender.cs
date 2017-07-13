@@ -15,6 +15,11 @@
 
     public override string ToString()
     {
-        return $"Fire Bender: {this.Name}, Power: {this.Power}, Water Clarity: {this.HeatAggression}";
+        return $"Fire Bender: {this.Name}, Power: {this.Power}, Heat Aggression: {this.HeatAggression:f2}";
+    }
+
+    public override double GetBenderTotalPower()
+    {
+        return this.Power * this.HeatAggression;
     }
 }

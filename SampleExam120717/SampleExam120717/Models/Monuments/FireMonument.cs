@@ -17,4 +17,9 @@
     {
         return $"Fire Monument: {this.Name}, Fire Affinity: {this.FireAffinity}";
     }
+
+    public override int GetMonumentPoints()
+    {
+        return this.FireAffinity;
+    }
 }

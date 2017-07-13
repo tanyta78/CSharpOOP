@@ -15,6 +15,11 @@
 
     public override string ToString()
     {
-        return $"Water Bender: {this.Name}, Power: {this.Power}, Water Clarity: {this.WaterClarity}";
+        return $"Water Bender: {this.Name}, Power: {this.Power}, Water Clarity: {this.WaterClarity:f2}";
+    }
+
+    public override double GetBenderTotalPower()
+    {
+        return this.Power * this.WaterClarity;
     }
 }

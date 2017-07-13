@@ -17,4 +17,9 @@
     {
         return $"Earth Monument: {this.Name}, Earth Affinity: {this.EarthAffinity}";
     }
+
+    public override int GetMonumentPoints()
+    {
+        return this.EarthAffinity;
+    }
 }
