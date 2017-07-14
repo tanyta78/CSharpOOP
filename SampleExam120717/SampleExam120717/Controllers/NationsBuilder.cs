@@ -95,7 +95,7 @@ public class NationsBuilder
         var nameToCheck = nationsType + "Nation";
         var result = this.nations.Where(n => n.GetType().Name == nameToCheck).FirstOrDefault();
 
-        return result.ToString();
+        return result.ToString().Trim();
     }
 
     public void IssueWar(string nationsType)

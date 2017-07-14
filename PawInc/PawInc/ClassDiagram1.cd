@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PawInc.Models.Animal" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAwAAAAEAAAAQAAAAEgAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Animal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Models.Center" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAABAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Center.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Models.Animals.Cat" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Animals\Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Models.Animals.Dog" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Animals\Dog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Models.Centers.AdoptionCenter" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Centers\AdoptionCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Models.Centers.CleansingCenter" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Centers\CleansingCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawInc.Program" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

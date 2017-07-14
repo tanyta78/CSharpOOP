@@ -65,7 +65,7 @@ public abstract class Nation
             sb.AppendLine();
             foreach (var bender in this.Benders)
             {
-                sb.AppendLine($"###{bender.ToString()}");
+                sb.AppendLine($"###{bender}");
             }
         }
         sb.Append("Monuments:");
@@ -78,7 +78,7 @@ public abstract class Nation
             sb.AppendLine();
             foreach (var monument in this.Monuments)
             {
-                sb.AppendLine($"###{monument.ToString()}");
+                sb.AppendLine($"###{monument}");
             }
         }
 
