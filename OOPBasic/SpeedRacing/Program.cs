@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 public class Program
 {
     private static void Main(string[] args)
@@ -11,7 +10,7 @@ public class Program
 
         for (int i = 0; i < numberOfCars; i++)
         {
-            var infoLine = Console.ReadLine().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+            var infoLine = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             var model = infoLine[0];
             var fuelAmount = double.Parse(infoLine[1]);
             var fuelCostForKm = double.Parse(infoLine[2]);

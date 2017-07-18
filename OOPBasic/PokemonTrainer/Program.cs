@@ -32,11 +32,10 @@ namespace PokemonTrainer
                 CheckPokemons(trainers, input);
             }
 
-            foreach (var trainer in trainers.OrderByDescending(t=>t.Value.Badges))
+            foreach (var trainer in trainers.OrderByDescending(t => t.Value.Badges))
             {
                 Console.WriteLine($"{trainer.Value.Name} {trainer.Value.Badges} {trainer.Value.PlayerPokemons.Count}");
             }
-            
         }
 
         private static void CheckPokemons(Dictionary<string, Trainer> trainers, string input)
@@ -44,7 +43,7 @@ namespace PokemonTrainer
             foreach (var trainer in trainers)
             {
                 var trainerPokemonList = trainer.Value.PlayerPokemons;
-                if (trainerPokemonList.Count==0)
+                if (trainerPokemonList.Count == 0)
                 {
                     continue;
                 }
@@ -54,7 +53,7 @@ namespace PokemonTrainer
                 }
                 else
                 {
-                    var pokemonsToDelete =new List<Pokemon>();
+                    var pokemonsToDelete = new List<Pokemon>();
                     foreach (var pokemon in trainerPokemonList)
                     {
                         pokemon.Health -= 10;
@@ -63,14 +62,13 @@ namespace PokemonTrainer
                             pokemonsToDelete.Add(pokemon);
                         }
                     }
-                    if (pokemonsToDelete.Count!=0)
+                    if (pokemonsToDelete.Count != 0)
                     {
                         foreach (var pokemon in pokemonsToDelete)
                         {
                             trainerPokemonList.Remove(pokemon);
                         }
                     }
-
                 }
             }
         }

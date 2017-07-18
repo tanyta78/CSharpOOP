@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PokemonTrainer
 {
-   public class Trainer
-   {
-       private string name;
-       private int badges;
-       private List<Pokemon> playerPokemons;
+    public class Trainer
+    {
+        private string name;
+        private int badges;
+        private List<Pokemon> playerPokemons;
 
         public Trainer(string name, List<Pokemon> playerPokemons)
         {
@@ -20,21 +16,21 @@ namespace PokemonTrainer
         }
 
         public string Name
-       {
-           get { return name; }
-           set { name = value; }
-       }
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
-       public int Badges
-       {
-           get { return badges; }
-           set { badges = value; }
-       }
+        public int Badges
+        {
+            get { return badges; }
+            set { badges = value; }
+        }
 
-       public List<Pokemon> PlayerPokemons
-       {
-           get { return playerPokemons; }
-           set { playerPokemons = value; }
-       }
-   }
+        public List<Pokemon> PlayerPokemons
+        {
+            get { return playerPokemons; }
+            set { playerPokemons = value; }
+        }
+    }
 }

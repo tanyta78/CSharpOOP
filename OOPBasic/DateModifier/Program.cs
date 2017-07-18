@@ -2,13 +2,12 @@
 
 public class Program
 {
-    static void Main()
+    private static void Main()
     {
         var firstDate = Console.ReadLine();
         var secondDate = Console.ReadLine();
 
         var daysBetweenTwoDates = new DateModifier();
-        daysBetweenTwoDates.CalculateDifferenceBetweenTwoDates(firstDate,secondDate);
+        daysBetweenTwoDates.CalculateDifferenceBetweenTwoDates(firstDate, secondDate);
     }
 }
-

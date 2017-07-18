@@ -34,11 +34,12 @@ public class Program
         switch (commandLine)
         {
             case "flamable":
-                foreach (var car in carsList.Where(c=>c.Cargo.Type== "flamable" && c.Engine.Power>250))
+                foreach (var car in carsList.Where(c => c.Cargo.Type == "flamable" && c.Engine.Power > 250))
                 {
                     Console.WriteLine($"{car.Model}");
                 }
                 break;
+
             case "fragile":
                 foreach (var car in carsList.Where(c => c.Cargo.Type == "fragile" && (c.Tire1.Pressure < 1 || c.Tire2.Pressure < 1 || c.Tire3.Pressure < 1 || c.Tire4.Pressure < 1)))
                 {

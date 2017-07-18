@@ -60,8 +60,8 @@ namespace Google
         public Person(string name)
         {
             this.Name = name;
-            this.Parents=new List<Parent>();
-            this.Children=new List<Child>();
+            this.Parents = new List<Parent>();
+            this.Children = new List<Child>();
             this.Pokemons = new List<Pokemon>();
         }
 

@@ -1,11 +1,9 @@
-﻿
-   public class Engine
-   {
-    
-       private string model;
-       private string power;
-       private string displacement;
-       private string efficiency;
+﻿public class Engine
+{
+    private string model;
+    private string power;
+    private string displacement;
+    private string efficiency;
 
     public Engine(string model, string power)
     {
@@ -22,27 +20,26 @@
     }
 
     public string Model
-       {
-           get { return model; }
-           set { model = value; }
-       }
+    {
+        get { return model; }
+        set { model = value; }
+    }
 
-       public string Power
-       {
-           get { return power; }
-           set { power = value; }
-       }
+    public string Power
+    {
+        get { return power; }
+        set { power = value; }
+    }
 
-       public string Displacement
-       {
-           get { return displacement; }
-           set { displacement = value; }
-       }
+    public string Displacement
+    {
+        get { return displacement; }
+        set { displacement = value; }
+    }
 
-       public string Efficiency
-       {
-           get { return efficiency; }
-           set { efficiency = value; }
-       }
-   }
-
+    public string Efficiency
+    {
+        get { return efficiency; }
+        set { efficiency = value; }
+    }
+}

@@ -16,17 +16,16 @@ public class Program
             var power = input[1];
             var displacement = "n/a";
             var efficiency = "n/a";
-            if (input.Length>2)
+            if (input.Length > 2)
             {
                 var result = 0;
                 if (int.TryParse(input[2], out result))
                 {
                     displacement = input[2];
-                    if (input.Length>3)
+                    if (input.Length > 3)
                     {
                         efficiency = input[3];
                     }
-                   
                 }
                 else
                 {
@@ -34,7 +33,6 @@ public class Program
                 }
             }
             engines.Add(new Engine(model, power, displacement, efficiency));
-
         }
 
         int numberOfCars = int.Parse(Console.ReadLine());
@@ -58,7 +56,6 @@ public class Program
                     {
                         color = input[3];
                     }
-
                 }
                 else
                 {
@@ -66,15 +63,12 @@ public class Program
                 }
             }
 
-            cars.Add(new Car(model,engine,weight,color));
+            cars.Add(new Car(model, engine, weight, color));
         }
 
         foreach (var car in cars)
         {
-           Console.WriteLine(car.ToString()); 
+            Console.WriteLine(car.ToString());
         }
-
-
-
     }
 }

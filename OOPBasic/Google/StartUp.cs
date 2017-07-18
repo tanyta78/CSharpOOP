@@ -22,8 +22,7 @@ namespace Google
             }
 
             var infoFor = Console.ReadLine();
-          PrintResult(people[infoFor]);
-
+            PrintResult(people[infoFor]);
         }
 
         private static void InsertPersonInfo(Person person, string[] info)
@@ -69,7 +68,7 @@ namespace Google
                         var carModel = info[2];
                         var carSpeed = int.Parse(info[3]);
 
-                        person.CarOwned=new Car(carModel,carSpeed);
+                        person.CarOwned = new Car(carModel, carSpeed);
                         break;
                 }
             }
@@ -118,6 +117,5 @@ namespace Google
                 }
             }
         }
-
     }
 }

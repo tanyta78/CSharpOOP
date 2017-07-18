@@ -1,6 +1,4 @@
-﻿using System;
-
-public class Car
+﻿public class Car
 {
     private string model;
     private Engine engine;
@@ -47,6 +45,6 @@ public class Car
 
     public override string ToString()
     {
-       return $"{this.Model}:\n  {this.Engine.Model}:\n    Power: {this.Engine.Power}\n    Displacement: {this.Engine.Displacement}\n    Efficiency: { this.Engine.Efficiency}\n  Weight: {this.Weight}\n  Color: {this.Color}";
+        return $"{this.Model}:\n  {this.Engine.Model}:\n    Power: {this.Engine.Power}\n    Displacement: {this.Engine.Displacement}\n    Efficiency: { this.Engine.Efficiency}\n  Weight: {this.Weight}\n  Color: {this.Color}";
     }
 }

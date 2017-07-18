@@ -10,6 +10,7 @@ public class DateModifier
         get { return firstDate; }
         set { this.firstDate = value; }
     }
+
     public string SecondDate
     {
         get { return secondDate; }

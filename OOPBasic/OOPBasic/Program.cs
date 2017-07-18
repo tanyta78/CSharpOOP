@@ -1,13 +1,11 @@
-﻿   using System;
-   using System.Collections.Generic;
-   using System.Linq;
-   using System.Reflection;
+﻿using System;
+using System.Linq;
+using System.Reflection;
 
 public class Program
 {
-    static void Main()
+    private static void Main()
     {
-        
         MethodInfo oldestMemberMethod = typeof(Family).GetMethod("GetOldestMember");
         MethodInfo addMemberMethod = typeof(Family).GetMethod("AddMember");
         if (oldestMemberMethod == null || addMemberMethod == null)
@@ -24,11 +22,5 @@ public class Program
             family.AddMember(person);
         }
         family.GetOldestMember();
-
     }
-
 }
-
-
-
-

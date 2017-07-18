@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace FamilyTree
 {
-   public class Person
+    public class Person
     {
         private string name;
         private string birthday;

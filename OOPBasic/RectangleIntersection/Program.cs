@@ -15,7 +15,7 @@ internal class Program
         for (int i = 0; i < numberOfRectangels; i++)
         {
             var input = Console.ReadLine().Split();
-            rectangels.Add(new Rectangle(input[0],double.Parse(input[1]), double.Parse(input[2]), double.Parse(input[3]), double.Parse(input[4])));
+            rectangels.Add(new Rectangle(input[0], double.Parse(input[1]), double.Parse(input[2]), double.Parse(input[3]), double.Parse(input[4])));
         }
 
         for (int checksIndex = 0; checksIndex < numberOfIntersectionChecks; checksIndex++)

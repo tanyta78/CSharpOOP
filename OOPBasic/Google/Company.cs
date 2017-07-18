@@ -30,7 +30,5 @@
             get { return salary; }
             set { salary = value; }
         }
-
-       
     }
 }

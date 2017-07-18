@@ -11,17 +11,15 @@ namespace FamilyTree
         public static void Main()
         {
             //read person for whom we search family tree - name or birthday
-            string personFamilyTree= Console.ReadLine();
+            string personFamilyTree = Console.ReadLine();
 
             string input;
-            var familyTree=new List<Person>();
+            var familyTree = new List<Person>();
 
             var people = new List<string>();
-            
-            while ((input=Console.ReadLine())!="End")
-            {
-               
 
+            while ((input = Console.ReadLine()) != "End")
+            {
                 if (!input.Contains("-"))
                 {
                     var searchedIndex = input.LastIndexOf(" ");
@@ -29,7 +27,7 @@ namespace FamilyTree
                     var name = input.Substring(0, searchedIndex);
                     var birthday = input.Substring(searchedIndex + 1);
 
-                    familyTree.Add(new Person(name,birthday));
+                    familyTree.Add(new Person(name, birthday));
                 }
                 else
                 {
