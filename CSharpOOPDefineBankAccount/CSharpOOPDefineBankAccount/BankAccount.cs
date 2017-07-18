@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 public class BankAccount
 {
@@ -17,7 +16,7 @@ public class BankAccount
         get { return balance; }
         set
         {
-            if (this.balance+value<0)
+            if (this.balance + value < 0)
             {
                 throw new ArgumentException("Account cant be less than zero");
             }
@@ -39,6 +38,4 @@ public class BankAccount
     {
         return $"Account {this.id}, balance {this.balance}";
     }
-
-   
 }

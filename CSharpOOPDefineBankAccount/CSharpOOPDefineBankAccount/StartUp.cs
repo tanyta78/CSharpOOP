@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Program
+public class StartUp
 {
     public static void Main()
     {
@@ -79,10 +79,7 @@ public class Program
         }
         else
         {
-            
-                accounts[id].Deposit(amount);
-            
-            
+            accounts[id].Deposit(amount);
         }
     }
 

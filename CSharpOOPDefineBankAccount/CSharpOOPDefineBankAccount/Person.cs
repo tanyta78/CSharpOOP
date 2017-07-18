@@ -11,7 +11,7 @@ public class Person
     {
         this.name = name;
         this.age = age;
-        this.accounts=new List<BankAccount>();
+        this.accounts = new List<BankAccount>();
     }
 
     public Person(string name, int age, List<BankAccount> accounts) : this(name, age)
@@ -41,10 +41,4 @@ public class Person
     {
         return this.accounts.Sum(a => a.Balance);
     }
-
-
-
-
-
 }
-
