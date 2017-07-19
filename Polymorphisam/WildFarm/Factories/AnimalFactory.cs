@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class AnimalFactory
 {
@@ -18,11 +17,11 @@ public class AnimalFactory
         {
             switch (animalType)
             {
-                case "Cat": return new Cat(animalName,animalType,animalWeight,animalLivingRegion,animalBreed);
-                case "Mouse": return new Mouse(animalName,animalType,animalWeight,animalLivingRegion);
-                case "Zebra": return new Zebra(animalName,animalType,animalWeight,animalLivingRegion);
-               
-                default: return new Tiger(animalName,animalType,animalWeight,animalLivingRegion);
+                case "Cat": return new Cat(animalName, animalType, animalWeight, animalLivingRegion, animalBreed);
+                case "Mouse": return new Mouse(animalName, animalType, animalWeight, animalLivingRegion);
+                case "Zebra": return new Zebra(animalName, animalType, animalWeight, animalLivingRegion);
+
+                default: return new Tiger(animalName, animalType, animalWeight, animalLivingRegion);
             }
         }
         catch (Exception e)
@@ -30,7 +29,5 @@ public class AnimalFactory
             Console.WriteLine(e);
             throw;
         }
-        
     }
 }
-

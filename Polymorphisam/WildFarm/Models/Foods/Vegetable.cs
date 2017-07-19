@@ -1,9 +1,7 @@
-﻿
-   public class Vegetable:Food
+﻿public class Vegetable : Food
+{
+    public Vegetable(int quantity)
     {
-        public Vegetable(int quantity)
-        {
-            this.Quantity = quantity;
-        }
+        this.Quantity = quantity;
+    }
 }
-

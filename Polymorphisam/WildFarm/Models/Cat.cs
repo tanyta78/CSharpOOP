@@ -20,12 +20,9 @@ public class Cat : Felime
         Console.WriteLine("Meowwww");
     }
 
-
     public override void Eat(Food food)
     {
-        
-            this.FoodEaten += food.Quantity;
-        
+        this.FoodEaten += food.Quantity;
     }
 
     public override string ToString()

@@ -12,7 +12,7 @@ public class Circle : Shape
     public double Radius
     {
         get { return this.radius; }
-        set {this.radius = value; }
+        set { this.radius = value; }
     }
 
     public override double CalculatePerimeter()
@@ -27,6 +27,6 @@ public class Circle : Shape
 
     public override string Draw()
     {
-        return base.Draw()+"Circle";
+        return base.Draw() + "Circle";
     }
 }

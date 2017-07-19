@@ -13,7 +13,6 @@ public class Zebra : Mammal
 
     public override void Eat(Food food)
     {
-
         if (food is Vegetable)
         {
             this.FoodEaten += food.Quantity;

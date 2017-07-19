@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class Truck : Vehicle
 {
@@ -27,11 +26,10 @@ public class Truck : Vehicle
         base.FuelQuantity += 0.95 * quantity;
     }
 
-    public Truck(double fuel, double consumption,double tank)
+    public Truck(double fuel, double consumption, double tank)
     {
         base.FuelQuantity = fuel;
         base.FuelConsumptionPerKm = consumption;
         base.TankCapacity = tank;
     }
 }
-

@@ -1,17 +1,15 @@
-﻿
-   using System;
+﻿using System;
 
-public class Dog:Animal
+public class Dog : Animal
+{
+    public Dog(string name, string favouriteFood)
     {
-        public Dog(string name, string favouriteFood)
-        {
-            this.Name = name;
-            this.FavoriteFood = favouriteFood;
-        }
+        this.Name = name;
+        this.FavoriteFood = favouriteFood;
+    }
 
-        public override string ExplainMyself()
-        {
-            return base.ExplainMyself() + Environment.NewLine + "DJAAF";
-        }
+    public override string ExplainMyself()
+    {
+        return base.ExplainMyself() + Environment.NewLine + "DJAAF";
+    }
 }
-

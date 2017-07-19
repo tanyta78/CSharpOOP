@@ -6,7 +6,6 @@ public class Program
     {
         try
         {
-
             var carInfo = Console.ReadLine().Split();
             var truckInfo = Console.ReadLine().Split();
             var busInfo = Console.ReadLine().Split();
@@ -21,8 +20,6 @@ public class Program
             {
                 try
                 {
-
-
                     var commandInput = Console.ReadLine().Split();
                     double quantity;
                     if (double.TryParse(commandInput[2], out quantity))
@@ -67,12 +64,10 @@ public class Program
                             default: throw new ArgumentException("Invalid input!");
                         }
                     }
-
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-
                 }
             }
 
@@ -83,7 +78,6 @@ public class Program
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
-
         }
     }
 }

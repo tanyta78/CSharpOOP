@@ -1,12 +1,9 @@
-﻿
-using System;
+﻿using System;
 
 public class Bus : Vehicle
 {
-    
     public override void Drive(double distance)
     {
-       
         var consumtionPerDistance = distance * (base.FuelConsumptionPerKm + 1.4);
 
         if (consumtionPerDistance > base.FuelQuantity)
@@ -22,7 +19,7 @@ public class Bus : Vehicle
 
     public void DriveEmpty(double distance)
     {
-        var consumtionPerDistance = distance * base.FuelConsumptionPerKm ;
+        var consumtionPerDistance = distance * base.FuelConsumptionPerKm;
 
         if (consumtionPerDistance > base.FuelQuantity)
         {
@@ -47,14 +44,12 @@ public class Bus : Vehicle
             throw new ArgumentException("Cannot fit fuel in tank");
         }
         base.FuelQuantity += quantity;
-
     }
 
-    public Bus(double fuel, double consumption,double tank)
+    public Bus(double fuel, double consumption, double tank)
     {
         base.FuelQuantity = fuel;
         base.FuelConsumptionPerKm = consumption;
         base.TankCapacity = tank;
     }
 }
-
