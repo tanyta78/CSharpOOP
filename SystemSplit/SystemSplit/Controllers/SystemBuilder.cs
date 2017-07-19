@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using SystemSplit.Models;
 using SystemSplit.Models.HardwareTypes;
 using SystemSplit.Models.SoftwareTypes;
@@ -15,9 +12,10 @@ namespace SystemSplit.Controllers
         private List<Software> softwareComponents;
         private List<Hardware> hardwareComponents;
 
-        public SystemBuilder(List<Software> softwares, List<Hardware> hardwares)
+        public SystemBuilder()
         {
             this.hardwareComponents = new List<Hardware>();
+            this.softwareComponents = new List<Software>();
         }
 
         public void RegisterPowerHardware(string name, int capacity, int memory)
@@ -94,6 +92,11 @@ namespace SystemSplit.Controllers
 
         public string SystemInfo()
         {
+            var sb = new StringBuilder();
+            foreach (var hardwareComponent in hardwareComponents.OrderByDescending(c => c.Type))
+            {
+            }
+            return sb.ToString().Trim();
         }
     }
 }

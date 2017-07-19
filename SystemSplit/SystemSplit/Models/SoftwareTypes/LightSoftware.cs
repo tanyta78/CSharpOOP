@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SystemSplit.Models.SoftwareTypes
+﻿namespace SystemSplit.Models.SoftwareTypes
 {
     public class LightSoftware : Software
     {
         public LightSoftware(string name, int capacityConsumption, int memoryConsumption) : base(name, capacityConsumption, memoryConsumption)
         {
             this.ModifyStats();
+            this.Type = "Light";
         }
 
         public override void ModifyStats()

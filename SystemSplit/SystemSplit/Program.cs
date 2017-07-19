@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SystemSplit.Controllers;
 
 namespace SystemSplit
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            var engine = new Engine();
+            engine.Start();
         }
     }
 }

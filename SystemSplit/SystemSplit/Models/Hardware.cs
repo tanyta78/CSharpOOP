@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SystemSplit.Models
 {
@@ -78,6 +76,32 @@ namespace SystemSplit.Models
             this.InstaledSoftwares.Remove(software);
             this.Capacity += software.CapacityConsumption;
             this.Memory += software.MemoryConsumption;
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+
+            sb.AppendLine($"Hardware Component -  {this.Name}");
+
+            var expressSoftwareComponents = this.InstaledSoftwares.Where(c => c.Type == "Express").ToList();
+            var lightSoftwareComponents = this.InstaledSoftwares.Where(c => c.Type == "Light").ToList();
+
+            sb.AppendLine($"Express Software Components: {expressSoftwareComponents.Count}");
+
+            sb.Append($"Light Software Components: {lightSoftwareComponents.Count}");
+
+            var maximumMemory = this.Memory;
+            var maximumCapacity = this.Capacity;
+            var memoryUsed = this.InstaledSoftwares.Select(s => s.MemoryConsumption).Sum();
+            var capacityUsed = this.InstaledSoftwares.Select(s => s.CapacityConsumption).Sum();
+            sb.Append($"Memory Usage: {memoryUsed} / {maximumMemory}");
+            sb.AppendLine($"Capacity Usage: {capacityUsed} / {maximumCapacity}");
+
+            sb.AppendLine($"  Type: {this.Type}");
+            sb.AppendLine($"Software Components: {string.Join(", ", InstaledSoftwares.Select(s => s.Name))}");
+
+            return sb.ToString().Trim();
         }
     }
 }

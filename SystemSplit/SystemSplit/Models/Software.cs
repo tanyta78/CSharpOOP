@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SystemSplit.Models
+﻿namespace SystemSplit.Models
 {
     public abstract class Software
     {
         private string name;
         private int capacityConsumption;
         private int memoryConsumption;
+        private string type;
 
         public Software(string name, int capacityConsumption, int memoryConsumption)
         {
@@ -35,6 +30,12 @@ namespace SystemSplit.Models
         {
             get { return memoryConsumption; }
             set { memoryConsumption = value; }
+        }
+
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
         }
 
         public abstract void ModifyStats();
