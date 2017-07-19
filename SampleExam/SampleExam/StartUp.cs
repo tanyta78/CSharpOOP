@@ -62,11 +62,11 @@ public class Startup
         var route = tokens[4];
         var prizePool = int.Parse(tokens[5]);
         var extra = 0;
-        if (tokens.Length==7)
+        if (tokens.Length == 7)
         {
             extra = int.Parse(tokens[6]);
         }
-        carManager.Open(id, type, lenght, route, prizePool,extra);
+        carManager.Open(id, type, lenght, route, prizePool, extra);
     }
 
     private static void RegisteredCar(CarManager carManager, string[] tokens)

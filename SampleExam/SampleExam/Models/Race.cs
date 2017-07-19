@@ -59,12 +59,12 @@ public abstract class Race
         }
     }
 
-  public Race(int length, string route, int prizePool)
+    public Race(int length, string route, int prizePool)
     {
         this.Length = length;
         this.Route = route;
         this.PrizePool = prizePool;
-        this.Participants=new Dictionary<int, Car>();
+        this.Participants = new Dictionary<int, Car>();
     }
 
     public virtual string StartRace()

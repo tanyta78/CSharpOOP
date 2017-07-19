@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class CircuitRace:Race
+public class CircuitRace : Race
 {
     private int laps;
 
@@ -30,7 +30,7 @@ public class CircuitRace:Race
         {
             return "Cannot start the race with zero Participants.";
         }
-       
+
         List<Car> winners = this.Participants.Values.OrderByDescending(x => x.GetOverallPerformance()).ToList();
 
         for (int i = 1; i <= end; i++)
@@ -51,7 +51,7 @@ public class CircuitRace:Race
             {
                 moneyWon = (int)(this.PrizePool * 0.1);
             }
-            var performancePoints  = winners[i-1].GetOverallPerformance()-durabilityLost ;
+            var performancePoints = winners[i - 1].GetOverallPerformance() - durabilityLost;
 
             sb.Append($"{i}. {winners[i - 1].Brand} {winners[i - 1].Model} " +
                       $"{performancePoints}PP - ${moneyWon}");

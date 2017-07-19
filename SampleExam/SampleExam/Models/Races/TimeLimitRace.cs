@@ -25,7 +25,6 @@ public class TimeLimitRace : Race
         }
         foreach (Car participantsValue in Participants.Values)
         {
-            
             var performance = (participantsValue.Horsepower / 100) * participantsValue.Acceleration * this.Length;
 
             sb.AppendLine($"{participantsValue.Brand} {participantsValue.Model} - {performance} s.");

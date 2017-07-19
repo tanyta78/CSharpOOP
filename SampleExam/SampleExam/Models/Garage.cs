@@ -2,7 +2,7 @@
 
 public class Garage
 {
-    private Dictionary<int,Car> parkedCars;
+    private Dictionary<int, Car> parkedCars;
 
     public Garage()
     {

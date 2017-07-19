@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 public abstract class Car
 {
@@ -10,11 +9,9 @@ public abstract class Car
     private int acceleration;
     private int suspension;
     private int durability;
-    
 
     protected Car(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
     {
-   
         this.Brand = brand;
         this.Model = model;
         this.YearOfProduction = yearOfProduction;
@@ -115,11 +112,9 @@ public abstract class Car
         }
     }
 
-   
-
     public override string ToString()
     {
-        return $"{this.Brand} {this.Model} {this.YearOfProduction}" + Environment.NewLine +$"{this.Horsepower} HP, 100 m/h in {this.Acceleration} s" + Environment.NewLine +$"{this.Suspension} Suspension force, {this.Durability} Durability";
+        return $"{this.Brand} {this.Model} {this.YearOfProduction}" + Environment.NewLine + $"{this.Horsepower} HP, 100 m/h in {this.Acceleration} s" + Environment.NewLine + $"{this.Suspension} Suspension force, {this.Durability} Durability";
     }
 
     public int GetOverallPerformance()

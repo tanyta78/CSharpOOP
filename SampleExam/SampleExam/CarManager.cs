@@ -112,7 +112,7 @@ public class CarManager
         {
             result += Environment.NewLine;
 
-            if (typeRace == "CasualRace"|| typeRace=="CircuitRace")
+            if (typeRace == "CasualRace" || typeRace == "CircuitRace")
             {
                 performancePoints = winner.GetOverallPerformance();
             }
