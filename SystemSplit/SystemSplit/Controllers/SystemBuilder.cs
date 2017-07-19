@@ -84,8 +84,8 @@ namespace SystemSplit.Controllers
             var totalOperationalMemoryInUse = softwareComponents.Select(s => s.MemoryConsumption).Sum();
             var totalCapacityTaken = softwareComponents.Select(s => s.CapacityConsumption).Sum();
 
-            sb.AppendLine($"Total Operational Memory: {totalOperationalMemoryInUse} / {maximumMemory}");
-            sb.AppendLine($"Total Capacity Taken: {totalCapacityTaken} / {maximumCapacity}");
+            sb.AppendLine($"Total Operational Memory: {totalOperationalMemoryInUse} / {maximumMemory + totalOperationalMemoryInUse}");
+            sb.AppendLine($"Total Capacity Taken: {totalCapacityTaken} / {maximumCapacity + totalCapacityTaken}");
 
             return sb.ToString().Trim();
         }
@@ -95,6 +95,7 @@ namespace SystemSplit.Controllers
             var sb = new StringBuilder();
             foreach (var hardwareComponent in hardwareComponents.OrderByDescending(c => c.Type))
             {
+                sb.AppendLine(hardwareComponent.ToString().Trim());
             }
             return sb.ToString().Trim();
         }

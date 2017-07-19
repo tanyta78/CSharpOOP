@@ -26,16 +26,16 @@ namespace SystemSplit.Models
             set { name = value; }
         }
 
-        public int Capacity
+        public virtual int Capacity
         {
             get { return capacity; }
-            set { capacity = value; }
+            protected set { capacity = value; }
         }
 
-        public int Memory
+        public virtual int Memory
         {
             get { return memory; }
-            set { memory = value; }
+            protected set { memory = value; }
         }
 
         public List<Software> InstaledSoftwares
@@ -82,23 +82,22 @@ namespace SystemSplit.Models
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine($"Hardware Component -  {this.Name}");
+            sb.AppendLine($"Hardware Component - {this.Name}");
 
             var expressSoftwareComponents = this.InstaledSoftwares.Where(c => c.Type == "Express").ToList();
             var lightSoftwareComponents = this.InstaledSoftwares.Where(c => c.Type == "Light").ToList();
 
-            sb.AppendLine($"Express Software Components: {expressSoftwareComponents.Count}");
-
-            sb.Append($"Light Software Components: {lightSoftwareComponents.Count}");
+            sb.AppendLine($"Express Software Components - {expressSoftwareComponents.Count}");
+            sb.AppendLine($"Light Software Components - {lightSoftwareComponents.Count}");
 
             var maximumMemory = this.Memory;
             var maximumCapacity = this.Capacity;
             var memoryUsed = this.InstaledSoftwares.Select(s => s.MemoryConsumption).Sum();
             var capacityUsed = this.InstaledSoftwares.Select(s => s.CapacityConsumption).Sum();
-            sb.Append($"Memory Usage: {memoryUsed} / {maximumMemory}");
-            sb.AppendLine($"Capacity Usage: {capacityUsed} / {maximumCapacity}");
+            sb.AppendLine($"Memory Usage: {memoryUsed} / {maximumMemory + memoryUsed}");
+            sb.AppendLine($"Capacity Usage: {capacityUsed} / {maximumCapacity + capacityUsed}");
 
-            sb.AppendLine($"  Type: {this.Type}");
+            sb.AppendLine($"Type: {this.Type}");
             sb.AppendLine($"Software Components: {string.Join(", ", InstaledSoftwares.Select(s => s.Name))}");
 
             return sb.ToString().Trim();

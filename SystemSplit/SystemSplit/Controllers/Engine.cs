@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SystemSplit.Controllers
 {
@@ -21,9 +22,10 @@ namespace SystemSplit.Controllers
                 var commandLine = Console.ReadLine();
                 if (commandLine.Contains('('))
                 {
-                    var command = commandLine.Split('(')[0];
-                    var cmdArgs = commandLine.Split('(')[0].Split(new[] { ')' }, StringSplitOptions.RemoveEmptyEntries)
-                        .ToString().Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    Regex rgx = new Regex(@"(\w+)\((.*)\)");
+                    var args = rgx.Match(commandLine).Groups;
+                    var command = args[1].Value;
+                    var cmdArgs = args[2].Value.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
                     switch (command)
                     {
@@ -48,13 +50,13 @@ namespace SystemSplit.Controllers
                             break;
 
                         case "Analyze":
-                            this.systemBuilder.Analyze();
+                            Console.WriteLine(this.systemBuilder.Analyze());
                             break;
                     }
                 }
                 else
                 {
-                    systemBuilder.SystemInfo();
+                    Console.WriteLine(systemBuilder.SystemInfo());
                     isRunning = false;
                 }
             }
