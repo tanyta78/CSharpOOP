@@ -12,7 +12,7 @@ public class Program
         for (int i = 0; i < numberOfSongs; i++)
         {
             string[] info = Console.ReadLine().Split(';');
-           
+
             try
             {
                 var author = info[0];
@@ -35,20 +35,16 @@ public class Program
             {
                 Console.WriteLine(ex.Message);
             }
-           
-            
         }
-        
-           
-            var durationInSeconds = playlist.Sum(s => s.Seconds) + playlist.Sum(s => s.Minutes) * 60;
 
-            var totalMinutes = durationInSeconds / 60;
-            var totalSeconds = durationInSeconds % 60;
-            var hours = totalMinutes / 60;
-            totalMinutes %= 60;
+        var durationInSeconds = playlist.Sum(s => s.Seconds) + playlist.Sum(s => s.Minutes) * 60;
 
-            Console.WriteLine($"Songs added: {playlist.Count}");
-            Console.WriteLine($"Playlist length: {hours}h {totalMinutes}m {totalSeconds}s");
-        
+        var totalMinutes = durationInSeconds / 60;
+        var totalSeconds = durationInSeconds % 60;
+        var hours = totalMinutes / 60;
+        totalMinutes %= 60;
+
+        Console.WriteLine($"Songs added: {playlist.Count}");
+        Console.WriteLine($"Playlist length: {hours}h {totalMinutes}m {totalSeconds}s");
     }
 }

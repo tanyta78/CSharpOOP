@@ -1,5 +1,3 @@
-﻿
-   public class JavaScript:Mood
-    {
-    }
-
+﻿public class JavaScript : Mood
+{
+}

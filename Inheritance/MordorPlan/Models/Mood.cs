@@ -1,9 +1,7 @@
-﻿
-   public abstract class Mood
+﻿public abstract class Mood
+{
+    public override string ToString()
     {
-        public override string ToString()
-        {
-            return this.GetType().Name;
-        }
+        return this.GetType().Name;
     }
-
+}

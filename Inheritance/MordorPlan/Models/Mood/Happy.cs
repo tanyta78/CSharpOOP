@@ -1,5 +1,3 @@
-﻿
-   public class Happy:Mood
-    {
-    }
-
+﻿public class Happy : Mood
+{
+}

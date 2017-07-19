@@ -1,5 +1,3 @@
-﻿
-   public class Angry:Mood
-    {
-    }
-
+﻿public class Angry : Mood
+{
+}

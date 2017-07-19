@@ -11,7 +11,7 @@ public class Human
         this.LastName = lastName;
     }
 
-    public  string FirstName
+    public string FirstName
     {
         get { return this.firstName; }
         set
@@ -20,7 +20,7 @@ public class Human
             {
                 throw new ArgumentException("Expected upper case letter! Argument: firstName");
             }
-            else if(value.Length < 4)
+            else if (value.Length < 4)
             {
                 throw new ArgumentException("Expected length at least 4 symbols! Argument: firstName");
             }

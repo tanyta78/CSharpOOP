@@ -7,7 +7,7 @@ public class RandomList : ArrayList
     private Random rnd;
     private List<string> data;
 
-   public RandomList()
+    public RandomList()
     {
         this.rnd = new Random();
         this.data = new List<string>();

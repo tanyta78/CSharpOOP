@@ -1,8 +1,7 @@
-﻿
-   public class Apple:Food
-   {
-       private string name;
-       private int pointOfHappiness;
+﻿public class Apple : Food
+{
+    private string name;
+    private int pointOfHappiness;
 
     public Apple(string name)
     {
@@ -10,14 +9,13 @@
         this.pointOfHappiness = 1;
     }
 
-       public override string getName()
-       {
-           return this.name;
-       }
+    public override string getName()
+    {
+        return this.name;
+    }
 
-       public override int getPointOfHappiness()
-       {
-           return this.pointOfHappiness;
-       }
-   }
-
+    public override int getPointOfHappiness()
+    {
+        return this.pointOfHappiness;
+    }
+}

@@ -49,7 +49,7 @@ public class Worker : Human
     public override string ToString()
     {
         var sb = new StringBuilder();
-       
+
         sb.AppendLine($"First Name: {this.FirstName}").AppendLine($"Last Name: {this.LastName}")
             .AppendLine($"Week Salary: {this.WeekSalary:f2}").AppendLine($"Hours per day: {this.WorkHoursPerDay:f2}")
             .AppendLine($"Salary per hour: {this.SalaryPerHour():f2}");

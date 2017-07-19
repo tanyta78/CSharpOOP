@@ -35,7 +35,7 @@ public class Student : Human
         return isValid;
     }
 
-    public Student(string firstName, string lastName,string facultyNumber) : base(firstName, lastName)
+    public Student(string firstName, string lastName, string facultyNumber) : base(firstName, lastName)
     {
         this.FacultyNumber = facultyNumber;
     }

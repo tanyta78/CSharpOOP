@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Text.RegularExpressions;
 
 public class Book
 {
@@ -20,17 +19,16 @@ public class Book
         get { return this.author; }
         set
         {
-
-            var names = value.Split(new []{' '},StringSplitOptions.RemoveEmptyEntries);
+            var names = value.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             if (names.Length > 2)
             {
-                var lastName = names[names.Length-1];
+                var lastName = names[names.Length - 1];
                 if (char.IsDigit(lastName[0]))
                 {
                     throw new ArgumentException("Author not valid!");
                 }
             }
-           this.author = value;
+            this.author = value;
         }
     }
 
@@ -39,10 +37,9 @@ public class Book
         get { return this.title; }
         set
         {
-
-            if (value.Length<3)
+            if (value.Length < 3)
             {
-               throw new ArgumentException("Title not valid!");
+                throw new ArgumentException("Title not valid!");
             }
 
             this.title = value;
@@ -54,9 +51,9 @@ public class Book
         get { return this.price; }
         set
         {
-            if (value<=0)
+            if (value <= 0)
             {
-               throw new ArgumentException("Price not valid!");
+                throw new ArgumentException("Price not valid!");
             }
             this.price = value;
         }

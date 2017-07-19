@@ -19,7 +19,7 @@ public class Program
         try
         {
             student = new Student(studentFirstName, studentLastName, studentFacultyNumber);
-           }
+        }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
@@ -36,7 +36,6 @@ public class Program
             Console.WriteLine(ex.Message);
             return;
         }
-       
 
         Console.WriteLine(student.ToString());
         Console.WriteLine(worker.ToString());

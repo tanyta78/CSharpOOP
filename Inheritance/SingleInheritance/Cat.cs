@@ -1,10 +1,9 @@
 ﻿using System;
 
-public class Cat:Animal
+public class Cat : Animal
 {
     public Cat()
     {
-        
     }
 
     public void Meow()
