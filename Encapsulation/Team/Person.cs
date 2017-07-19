@@ -75,7 +75,6 @@ public class Person
         {
             this.salary += this.salary * bonus / 200;
         }
-
         else
         {
             this.salary += this.salary * bonus / 100;

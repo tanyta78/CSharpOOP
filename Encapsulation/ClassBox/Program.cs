@@ -24,9 +24,7 @@ namespace ClassBox
             catch (ArgumentException exeption)
             {
                 Console.WriteLine(exeption.Message);
-                
             }
-          
         }
     }
 }

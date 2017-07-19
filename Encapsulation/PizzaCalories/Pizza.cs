@@ -18,7 +18,6 @@ namespace PizzaCalories
             this.NumberOfToppings = numberOfToppings;
         }
 
-
         public string Name
         {
             get { return this.name; }

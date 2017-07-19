@@ -11,7 +11,7 @@ namespace PizzaCalories
         private const int MinWeight = 1;
         private const int MaxWeight = 200;
 
-        public Dough(string flourType, string bakingTechnique, double  weight)
+        public Dough(string flourType, string bakingTechnique, double weight)
         {
             this.FlourType = flourType;
             this.BakingTechnique = bakingTechnique;
@@ -83,7 +83,7 @@ namespace PizzaCalories
 
         public double GetCalories()
         {
-           return 2 * this.Weight * this.GetTechMod() * this.GetTypeMod();
+            return 2 * this.Weight * this.GetTechMod() * this.GetTypeMod();
         }
     }
 }

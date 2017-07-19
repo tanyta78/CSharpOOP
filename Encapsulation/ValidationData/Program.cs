@@ -21,13 +21,12 @@ public class Program
             }
             catch (ArgumentException exception)
             {
-               Console.WriteLine(exception.Message); 
+                Console.WriteLine(exception.Message);
             }
         }
         var bonus = double.Parse(Console.ReadLine());
         persons.ForEach(p => p.IncreaseSalary(bonus));
 
         persons.ForEach(p => Console.WriteLine(p.ToString()));
-
     }
 }

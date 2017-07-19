@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ShoppingSpree
 {
@@ -14,26 +13,21 @@ namespace ShoppingSpree
             var persons = new List<Person>();
             var products = new List<Product>();
 
-
             try
             {
                 foreach (var person in personsInput)
                 {
-                    
-                        var info = person.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
-                        var name = info[0];
-                        var money = decimal.Parse(info[1]);
-                        persons.Add(new Person(name, money));
-                   
+                    var info = person.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+                    var name = info[0];
+                    var money = decimal.Parse(info[1]);
+                    persons.Add(new Person(name, money));
                 }
                 foreach (var product in productsInput)
                 {
-                   
-                        var info = product.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
-                        var name = info[0];
-                        var cost = decimal.Parse(info[1]);
-                        products.Add(new Product(name, cost));
-                   
+                    var info = product.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+                    var name = info[0];
+                    var cost = decimal.Parse(info[1]);
+                    products.Add(new Product(name, cost));
                 }
 
                 string input;
@@ -45,7 +39,6 @@ namespace ShoppingSpree
 
                     var currentPerson = persons.FirstOrDefault(p => p.Name == personName);
                     var currentProduct = products.FirstOrDefault(p => p.Name == productName);
-                    
 
                     try
                     {
@@ -54,15 +47,11 @@ namespace ShoppingSpree
                     catch (Exception e)
                     {
                         Console.WriteLine(e.Message);
-                        
                     }
-
-                   
                 }
 
                 foreach (var person in persons)
                 {
-                   
                     var boughtProducts = person.GetProducts();
                     var result = boughtProducts.Any()
                         ? string.Join(", ", boughtProducts.Select(pr => pr.Name).ToList())
@@ -74,8 +63,6 @@ namespace ShoppingSpree
             {
                 Console.WriteLine(exception.Message);
             }
-
-            
         }
     }
 }

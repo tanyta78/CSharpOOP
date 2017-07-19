@@ -7,7 +7,7 @@ namespace PizzaCalories
         public static void Main()
         {
             string input;
-           
+
             while ((input = Console.ReadLine()) != "END")
             {
                 var args = input.Split();
@@ -36,9 +36,7 @@ namespace PizzaCalories
                     Console.WriteLine(e.Message);
                     return;
                 }
-
             }
-            
         }
 
         private static void CreatePizza(string[] args)

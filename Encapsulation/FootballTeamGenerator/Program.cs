@@ -14,7 +14,7 @@ namespace FootballTeamGenerator
 
             while ((input = Console.ReadLine()) != "END")
             {
-                var args = input.Split(new[] {';'}, StringSplitOptions.RemoveEmptyEntries);
+                var args = input.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                 var command = args[0];
                 try
                 {

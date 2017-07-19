@@ -20,7 +20,7 @@ public class Person
         get { return firstName; }
         set
         {
-            if (value.Length<3)
+            if (value.Length < 3)
             {
                 throw new ArgumentException("First name cannot be less than 3 symbols");
             }
@@ -47,7 +47,7 @@ public class Person
         get { return age; }
         set
         {
-            if (value <=0)
+            if (value <= 0)
             {
                 throw new ArgumentException("Age cannot be zero or negative integer");
             }
@@ -75,7 +75,6 @@ public class Person
         {
             this.salary += this.salary * bonus / 200;
         }
-
         else
         {
             this.salary += this.salary * bonus / 100;

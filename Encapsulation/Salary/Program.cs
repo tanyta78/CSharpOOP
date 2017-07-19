@@ -21,6 +21,5 @@ public class Program
         persons.ForEach(p => p.IncreaseSalary(bonus));
 
         persons.ForEach(p => Console.WriteLine(p.ToString()));
-
     }
 }

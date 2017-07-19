@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingSpree
 {
@@ -22,7 +19,7 @@ namespace ShoppingSpree
         public string Name
         {
             get { return this.name; }
-             set
+            set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
@@ -45,18 +42,16 @@ namespace ShoppingSpree
             }
         }
 
-
         public void BuyProduct(Product product)
         {
             if (this.Money < product.Cost)
             {
-               throw  new InvalidOperationException($"{this.Name} can't afford {product.Name}");
+                throw new InvalidOperationException($"{this.Name} can't afford {product.Name}");
             }
-            
-                this.products.Add(product);
-                this.Money -= product.Cost;
-                Console.WriteLine($"{this.Name} bought {product.Name}");
-            
+
+            this.products.Add(product);
+            this.Money -= product.Cost;
+            Console.WriteLine($"{this.Name} bought {product.Name}");
         }
 
         public IList<Product> GetProducts()

@@ -22,13 +22,11 @@ public class Team
     public IReadOnlyCollection<Person> FirstTeam
     {
         get { return firstTeam.AsReadOnly(); }
-       
     }
 
     public IReadOnlyCollection<Person> ReserveTeam
     {
         get { return reserveTeam.AsReadOnly(); }
-       
     }
 
     public void AddPlayer(Person player)
