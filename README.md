@@ -52,6 +52,11 @@ Tatyana Milanova
         <p><a title="Exam" href="https://github.com/tanyta78/CSharpOOP/tree/master/OOPBasic16072017" target="_blank">Exam</a></p>
         </td>
         </tr>
+         <tr>
+        <td width="50%">
+        <p><a title="Team Project" href="https://github.com/tanyta78/CSharpOOPGame" target="_blank">Team Project</a></p>
+        </td>
+        </tr>
         </tbody>
         </table>
         <hr />
